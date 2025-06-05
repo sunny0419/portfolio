@@ -15,11 +15,11 @@ theme.PALLETE = {
         main : "#F74C26"
     },
     white: "#fff",
-    line: {
-        100: "#EEEEEE",
-        200: "#E2E4E6",
-        300: "#D2D4D4",
-    },
+    // line: {
+    //     100: "#EEEEEE",
+    //     200: "#E2E4E6",
+    //     300: "#D2D4D4",
+    // },
     text: {
         primary: "#111111",
         secondary: "#555555",
