@@ -15,3 +15,11 @@ export const flexRow = css`
     display: flex;
     flex-direction: row;
 `
+
+export const container = css`
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0 240px;
+    box-sizing: border-box;
+`

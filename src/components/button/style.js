@@ -2,148 +2,93 @@ import styled, { css } from "styled-components";
 
 
 const variantCSS = {
-    primary : css`
+    default : css`
+        background-color: ${({theme}) => theme.PALLETE.white};
+        color: ${({theme}) => theme.PALLETE.primary["main"]};
+        border: 1px solid ${({theme}) => theme.PALLETE.primary["main"]};
+    `,
+    filled : css`
         background-color: ${({theme}) => theme.PALLETE.primary["main"]};
+        color: ${({theme}) => theme.PALLETE.text["white"]};
+        border: 1px solid ${({theme}) => theme.PALLETE.primary["main"]};
     `,
-    sub : css`
-        background-color: ${({theme}) => theme.PALLETE.primary["sub"]};
+    gray : css`
+        background-color: ${({theme}) => theme.PALLETE.background["gray200"]};
+        color: ${({theme}) => theme.PALLETE.text["primary"]};
+        border: 1px solid ${({theme}) => theme.PALLETE.background["gray200"]};
     `,
-    white : css`
-        background-color: ${({theme}) => theme.PALLETE.primary["white"]};
+    disabled : css`
+        background-color: ${({theme}) => theme.PALLETE.background["gray200"]};
+        color: ${({theme}) => theme.PALLETE.text.disabled["strong"]};
+        border: 1px solid ${({theme}) => theme.PALLETE.background["gray200"]};
     `,
-    gray100 : css`
-        background-color: ${({theme}) => theme.PALLETE.gray["100"]};
-    `
 };
 
-/*border*/
-const borderCSS = {
-    primary : css`
-        border: solid 1px ${({theme}) => theme.PALLETE.primary["main"]};
-    `,
-    sub : css`
-        border: solid 1px ${({theme}) => theme.PALLETE.primary["sub"]};
-    `,
-    gray100 : css`
-        border: solid 1px ${({theme}) => theme.PALLETE.gray["100"] };
-    `,
-    gray200 : css`
-        border: solid 1px ${({theme}) => theme.PALLETE.gray["200"] };
-    `,
-    gray300 : css`
-        border: solid 1px ${({theme}) => theme.PALLETE.gray["300"] };
-    `
-};
 
-const colorCSS = {
-    primary : css`
-    color: ${({theme}) => theme.PALLETE.primary["main"]};
-  `,
-    sub : css`
-    color: ${({theme}) => theme.PALLETE.primary["sub"]};
-  `,
-    white : css`
-    color: ${({theme}) => theme.PALLETE["white"]};
-    `,
-    black : css`
-    color: ${({theme}) => theme.PALLETE["black"]};
-  `,
-    gray100 : css`
-    color: ${({theme}) => theme.PALLETE.gray["100"] };
-  `,
-    gray200 : css`
-    color: ${({theme}) => theme.PALLETE.gray["200"] };
-  `,
-    gray300 : css`
-    color: ${({theme}) => theme.PALLETE.gray["300"] };
-  `
-};
 
-const shapeCSS = {
-    default: css``,
-    small : css`
-    border-radius: 10px;
-  `,
-    large : css`
-    border-radius: 20px;
-  `,
-    big : css`
-    border-radius: 30px;
-  `,
-    round : css`
-    border-radius: 50%;
-  `,
+const basicButtonCSS = {
+    superSmall: css`
+        padding: ${({ theme }) => `${theme.SPACING["18"]} ${theme.SPACING["36"]}`};
+        border-radius: 10px;
+        font-size: ${({theme}) => theme.FONT_SIZE["caption2"] };
+        font-weight: ${({theme}) => theme.FONT_WEIGHT["semiBold"] };
+    `,
+    small: css`
+        padding: ${({ theme }) => `${theme.SPACING["18"]} ${theme.SPACING["78"]}`};
+        border-radius: 10px;
+        font-size: ${({theme}) => theme.FONT_SIZE["caption2"] };
+        font-weight: ${({theme}) => theme.FONT_WEIGHT["semiBold"] };
+    `,
+    medium: css`
+        padding: ${({ theme }) => `${theme.SPACING["18"]} ${theme.SPACING["148"]}`};
+        border-radius: 10px;
+        font-size: ${({theme}) => theme.FONT_SIZE["caption2"] };
+        font-weight: ${({theme}) => theme.FONT_WEIGHT["semiBold"] };
+    `,
+    large: css`
+        padding: ${({ theme }) => `${theme.SPACING["18"]} ${theme.SPACING["278"]}`};
+        border-radius: 10px;
+        font-size: ${({theme}) => theme.FONT_SIZE["caption2"] };
+        font-weight: ${({theme}) => theme.FONT_WEIGHT["semiBold"] };
+    `,
 }
 
-const sizeCSS = {
-    small : css`
-    width: 64px;
-    height: 32px;
-    padding: 16px 0;
-  `,
-    medium : css`
-    width: 96px;
-    height: 48px;
-    padding: 16px 0;
-  `,
-    large : css`
-    width: 128px;
-    height: 64px;
-    padding: 16px 0;
-  `,
-    full : css`
-    width: 100%;
-    aspect-ratio: 8 / 1;
-    padding: 16px 0;
-  `,
+const roundButtonCSS = {
+    superSmall: css`
+        padding: ${({ theme }) => `${theme.SPACING["10"]} ${theme.SPACING["20"]}`};
+        border-radius: 52px;
+        font-size: ${({theme}) => theme.FONT_SIZE["button4"] };
+        font-weight: ${({theme}) => theme.FONT_WEIGHT["semiBold"] };
+    `,
+    small: css`
+        padding: ${({ theme }) => `${theme.SPACING["16"]} ${theme.SPACING["28"]}`};
+        border-radius: 52px;
+        font-size: ${({theme}) => theme.FONT_SIZE["button3"] };
+        font-weight: ${({theme}) => theme.FONT_WEIGHT["semiBold"] };
+    `,
+    medium: css`
+        padding: ${({ theme }) => `${theme.SPACING["20"]} ${theme.SPACING["54"]}`};
+        border-radius: 52px;
+        font-size: ${({theme}) => theme.FONT_SIZE["button2"] };
+        font-weight: ${({theme}) => theme.FONT_WEIGHT["semiBold"] };
+    `,
+    large: css`
+        padding: ${({ theme }) => `${theme.SPACING["28"]} ${theme.SPACING["84"]}`};
+        border-radius: 52px;
+        font-size: ${({theme}) => theme.FONT_SIZE["button1"] };
+        font-weight: ${({theme}) => theme.FONT_WEIGHT["semiBold"] };
+    `,
 }
 
-const fontCSS = {
-    h1 : css`
-    font-size: ${({theme}) => theme.FONT_SIZE["h1"]};
-    line-height: ${({theme}) => theme.FONT_LINE["h1"]};
-  `,
-    h2 : css`
-    font-size: ${({theme}) => theme.FONT_SIZE["h2"]};
-    line-height: ${({theme}) => theme.FONT_LINE["h2"]};
-  `,
-    h3 : css`
-    font-size: ${({theme}) => theme.FONT_SIZE["h3"]};
-    line-height: ${({theme}) => theme.FONT_LINE["h3"]};
-  `,
-    h4 : css`
-    font-size: ${({theme}) => theme.FONT_SIZE["h4"]};
-    line-height: ${({theme}) => theme.FONT_LINE["h4"]};
-  `,
-    h5 : css`
-    font-size: ${({theme}) => theme.FONT_SIZE["h5"]};
-    line-height: ${({theme}) => theme.FONT_LINE["h5"]};
-  `,
-    h6 : css`
-    font-size: ${({theme}) => theme.FONT_SIZE["h6"]};
-    line-height: ${({theme}) => theme.FONT_LINE["h6"]};
-  `,
-    h7 : css`
-    font-size: ${({theme}) => theme.FONT_SIZE["h7"]};
-    line-height: ${({theme}) => theme.FONT_LINE["h7"]};
-  `,
-    h8 : css`
-    font-size: ${({theme}) => theme.FONT_SIZE["h8"]};
-    line-height: ${({theme}) => theme.FONT_LINE["h8"]};
-  `,
-    h9 : css`
-    font-size: ${({theme}) => theme.FONT_SIZE["h9"]};
-    line-height: ${({theme}) => theme.FONT_LINE["h9"]};
-  `,
-}
+
+
+
+
 
 const Button = styled.button`
-  ${({color}) => colorCSS[color]}
-  ${({font}) => fontCSS[font]}
-  ${({size}) => sizeCSS[size]}
-  ${({border}) => borderCSS[border]}
+  ${({roundButton}) => roundButtonCSS[roundButton]}
+  ${({basicButton}) => basicButtonCSS[basicButton]}
   ${({variant}) => variantCSS[variant]}
-  ${({shape}) => shapeCSS[shape]}
-`
+  `
 
 export default Button;
