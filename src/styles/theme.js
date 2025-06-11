@@ -21,9 +21,9 @@ theme.PALLETE = {
         300: "#D2D4D4",
     },
     text: {
-        primary: "#111111",
-        secondary: "#555555",
-        tertiary: "#767676",
+        main: "#111111",
+        sub: "#555555",
+        sub2: "#767676",
 
         disabled: {
             strong: "#999999",
