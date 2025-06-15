@@ -4,13 +4,15 @@ import './App.css';
 import GlobalStyle from "./styles/global";
 import theme from "./styles/theme";
 import Main from "./pages/main/Main";
+import {RouterProvider} from "react-router-dom";
+import Router from "./routes/router";
 
 function App() {
   return (
     <>
         <ThemeProvider theme={theme}>
             <GlobalStyle />
-            <Main/>
+            <RouterProvider router={Router}/>
         </ThemeProvider>
     </>
   );

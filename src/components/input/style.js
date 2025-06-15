@@ -10,7 +10,7 @@ S.Input = styled.input`
     border-radius: 8px;
     padding: ${({ theme }) => `${theme.PALLETE.SPACING[20]} ${theme.PALLETE.SPACING[24]}`};
     ${spacingProps}
-    
+
     &:hover {
             border-color: ${({ theme }) => theme.PALLETE.text.main};
         }

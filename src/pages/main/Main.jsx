@@ -4,7 +4,7 @@ import BasicButton from "../../components/button/BasicButton";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import Icon from "../../components/icons/Icon";
 import Text from "../../components/text/size";
-import S from "./style";
+
 
 
 
@@ -21,10 +21,6 @@ const Main = () => {
                 <Icon icon={faCheck} ml="10" fontSize="10" />
             </BasicButton>
             <Text.Body2 color={"red"}>정지우입니다</Text.Body2>
-
-            {/*<S.Input type="text" backgroundColor={"red"} mt="100"/>*/}
-
-            <S.Input type="text" />
         </Section>
     );
 };

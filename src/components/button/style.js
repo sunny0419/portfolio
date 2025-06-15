@@ -1,5 +1,6 @@
 import styled, { css } from "styled-components";
 import {spacingProps} from "../../styles/spacingProps";
+import {flexCenter} from "../../styles/common";
 
 //케이스에 따른 분류
 const variantCSS = {
@@ -96,6 +97,7 @@ const Button = styled.button`
   ${({basicButton}) => basicButtonCSS[basicButton]}
   ${({variant}) => variantCSS[variant]}
   ${spacingProps}
-  `
+  ${flexCenter};
+`
 
 export default Button;
