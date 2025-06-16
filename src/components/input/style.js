@@ -15,20 +15,32 @@ S.Input = styled.input`
     padding: ${({ theme }) => `${theme.SPACING["20"]} ${theme.SPACING["24"]}`};
     ${spacingProps}
 
-    &:hover {
+        //아무스 호버 상태
+        &:hover {
             border-color: ${({ theme }) => theme.PALLETE.primary.main};
         }
-
+        //placeholder 텍스트 색상
         &::placeholder {
-           font-size: ${({ theme }) => theme.FONT_SIZE["body3"]};
-            line-height: ${({ theme }) => theme.LINE_HEIGHT["body3"]};
             color: ${({ theme }) => theme.PALLETE.text.disabled.weak};
         }
 
+        //입력중일때
         &:focus {
             outline: none;
             border-color: ${({ theme }) => theme.PALLETE.primary.main};
             box-shadow: 0 0 0 2px ${({ theme }) => theme.PALLETE.primary.light};
+        }
+
+        //disabled 상태일때
+        &:disabled {
+            outline: none;
+            background-color: ${({ theme }) => theme.PALLETE.background.gray100};
+            border: none;
+        }
+
+        //입력 다 한 상태
+        &:not(:focus):not(:placeholder-shown) {
+            border-color: ${({ theme }) => theme.PALLETE.primary.main};
         }
 `
 

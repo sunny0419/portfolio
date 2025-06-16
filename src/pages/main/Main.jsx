@@ -1,5 +1,4 @@
 import React from 'react';
-import Wrapper from "../../components/layout/Wrapper";
 import BasicButton from "../../components/button/BasicButton";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import Icon from "../../components/icons/Icon";
