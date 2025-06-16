@@ -22,6 +22,7 @@ const Main = () => {
             <BasicInput type="text" placeholder="이름을 입력하세요"/>
 
             안녕하세요
+            테스트 22
 
         </Wrapper>
     );
