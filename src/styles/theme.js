@@ -99,6 +99,7 @@ theme.FONT_WEIGHT = {
 
 /*마진 , 패딩값*/
 theme.SPACING = {
+    0: "0px",
     2: "2px",
     4: "4px",
     8: "8px",
