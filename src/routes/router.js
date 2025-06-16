@@ -26,7 +26,7 @@ const router = createBrowserRouter([
         element : <Layout />,
         children: [
             // 지우
-            { path: "", element: <Main /> }, // 메인
+            { path: "main", element: <Main /> }, // 메인
             { path: "matching", element: <Matching /> }, // 강아지 매칭화면
 
             // 선희
