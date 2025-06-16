@@ -21,6 +21,8 @@ const Main = () => {
             <Text.Body2 color={"red"}>정지우입니다</Text.Body2>
             <BasicInput type="text" placeholder="이름을 입력하세요"/>
 
+            안녕하세요
+
         </Wrapper>
     );
 };
